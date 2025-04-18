@@ -4,3 +4,4 @@ Mini project demo - Test Run
 Updated to install GH CLI
 Updated to GH_TOKEN to the Repository secrets
 Restarted the self hosted runner - after setting up GH_TOKEN
+Running after adding DOCKERHUB_UNAME AND DOCKERHUB_PASSWORD added to Secrets
