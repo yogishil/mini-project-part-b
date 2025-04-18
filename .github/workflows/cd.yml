@@ -1,0 +1,29 @@
+name: Bike Share Project Deployment
+
+on:
+  workflow_run:
+    workflows: ["Bike Share project Docker build."]
+    types:
+      - completed
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      #- name: Download artifact
+        #uses: actions/download-artifact@v4
+        #with:
+          #name: version
+
+      #- name: Read version
+        #run: echo "VERSION=$(cat version.txt)" >> $GITHUB_ENV
+               
+      - name: Pull the  docker image which build on ci.ymal
+        run: |
+          sudo docker pull ${{ secrets.DOCKERHUB_UNAME }}/bike_sharing_api:${{vars.VERSION}}
+
+      - name: Run bikesharing api image
+        run: |
+          sudo docker run -d -p ${{vars.BIKESHARE_API_PORT}}:${{vars.BIKESHARE_API_PORT}} ${{ secrets.DOCKERHUB_UNAME }}/bike_sharing_api:${{vars.VERSION}}
+          
+  
+      
