@@ -37,8 +37,8 @@ jobs:
     - name: Update GitHub Repository Variable
       run: |
           gh variable set VERSION --body "$VERSION"
-      env:
-          GH_TOKEN: ${{ secrets.GIT_TOKEN }}
+      #env:
+          #GH_TOKEN: ${{ secrets.GIT_TOKEN }}
           #GH_TOKEN: ${{ github.token }}
 
 
