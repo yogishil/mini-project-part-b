@@ -10,7 +10,7 @@ terraform {
 #provider "aws" {
   #access_key = ""
   #secret_key = ""
-  #region = "us-east-1"
+  #region = "ap-southeast-2"
 #}
 
 resource "aws_key_pair" "bikeshare_key" {
@@ -47,7 +47,7 @@ resource "aws_instance" "bikeshare_ec2" {
         "sudo curl -o actions-runner-linux-x64-2.323.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.323.0/actions-runner-linux-x64-2.323.0.tar.gz",
         "echo '0dbc9bf5a58620fc52cb6cc0448abcca964a8d74b5f39773b7afcad9ab691e19  actions-runner-linux-x64-2.323.0.tar.gz' | shasum -a 256 -c ",
         "tar xzf ./actions-runner-linux-x64-2.323.0.tar.gz",
-        #"yes '' | ./config.sh --url https://github.com/AIMLOPS-B/bikeshare_project-Part-B --token AB4OKEUJYLRMP5UOGY2SX3DH5QHH4",
+        #"yes '' | ./config.sh --url https://github.com/yogishil/mini-project-part-b --token AOYFUGS37E7YIEAPE6NDFKLIAG37M",
         #"./run.sh &"
 
      ]
