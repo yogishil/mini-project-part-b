@@ -33,14 +33,13 @@ jobs:
     - name: Read VERSION file and set as environment variable
       run: |
        echo "VERSION=$(cat bikeshare_model/VERSION)" >> $GITHUB_ENV
-       
-    - name: Update GitHub Repository Variable
-      run: |
-          gh variable set VERSION --body "$VERSION"
+    
+    #- name: Update GitHub Repository Variable
+    #  run: |
+    #      gh variable set VERSION --body "$VERSION"
       #env:
           #GH_TOKEN: ${{ secrets.GIT_TOKEN }}
           #GH_TOKEN: ${{ github.token }}
-
 
     - name: Run training pipeline
       run: |
