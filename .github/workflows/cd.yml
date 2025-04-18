@@ -30,7 +30,9 @@ jobs:
         
       - name: Run bikesharing api image
         run: |
-          sudo docker run -d -p ${{vars.BIKESHARE_API_PORT}}:${{vars.BIKESHARE_API_PORT}} ${{ secrets.DOCKERHUB_UNAME }}/bike_sharing_api:${{vars.VERSION}}
+          sudo docker run -d -p 8001:8001 --name bikeshare_app yogishil/bikeshare_model_api:0.0.2
+
+        # sudo docker run -d -p ${{vars.BIKESHARE_API_PORT}}:${{vars.BIKESHARE_API_PORT}} ${{ secrets.DOCKERHUB_UNAME }}/bike_sharing_api:${{vars.VERSION}}
           
   
       
