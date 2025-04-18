@@ -38,8 +38,8 @@ jobs:
       run: |
           gh variable set VERSION --body "$VERSION"
       env:
-          #GH_TOKEN: ${{ secrets.GIT_TOKEN }}
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GIT_TOKEN }}
+          #GH_TOKEN: ${{ github.token }}
 
 
     - name: Run training pipeline
