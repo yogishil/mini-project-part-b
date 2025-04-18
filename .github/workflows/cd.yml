@@ -12,10 +12,10 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: version
+          name: VERSION
 
       - name: Read version
-        run: echo "VERSION=$(cat version.txt)" >> $GITHUB_ENV
+        run: echo "VERSION=$(cat VERSION.txt)" >> $GITHUB_ENV
                
       - name: Pull the  docker image which build on ci.ymal
         run: |
