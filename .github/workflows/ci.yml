@@ -42,7 +42,7 @@ jobs:
 
     - name: Run training pipeline
       run: |
-        python bikeshare_model/train_pipeline.py
+        python3 bikeshare_model/train_pipeline.py
         
     - name: Test with pytest
       run: |
@@ -50,7 +50,7 @@ jobs:
         
     - name: Build Model to generage whl file
       run: |
-        python -m build
+        python3 -m build
         
     - name: Login to DockerHub
       run: |
