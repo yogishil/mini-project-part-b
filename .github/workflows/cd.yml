@@ -13,7 +13,13 @@ jobs:
       #   uses: actions/download-artifact@v4
       #   with:
       #     name: VERSION
+      # - name: Download artifact
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: VERSION
 
+      # - name: Read version
+      #   run: echo "VERSION=$(cat VERSION.txt)" >> $GITHUB_ENV
       # - name: Read version
       #   run: echo "VERSION=$(cat VERSION.txt)" >> $GITHUB_ENV
                
